@@ -2,6 +2,7 @@ package tw.ming.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Collection;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -10,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 
 @MultipartConfig
 @WebServlet(
@@ -28,7 +30,22 @@ public class servlet12 extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		request.setCharacterEncoding("UTF-8");
-		doGet(request, response);
+		String uploadpath = getServletContext().getInitParameter("upload-path");
+		Collection<Part> parts = request.getParts();
+		
+		for(Part part:parts) {
+			String header = part.getHeader("Content-Disposition");
+			String filename = servletAPI.getHeaderFileName(header);
+			//防止沒有檔案上傳時
+			if(filename!=null && filename.length()>0) {
+				part.write(uploadpath + "/" + filename);
+			}			
+		}
+	
 	}
-
 }
+
+
+
+
+

@@ -10,4 +10,10 @@
     <param-name>upload-path</param-name>
     <param-value>C:\Users\Mac\git_j2eeServlet\servlet\WebContent\upload</param-value>
   </context-param>
+  
+  <context-param>
+  	<description>畫面樣板放置路徑</description>
+    <param-name>template-path</param-name>
+    <param-value>C:\Users\Mac\git_j2eeServlet\servlet\WebContent\templates</param-value>
+  </context-param>
 </web-app>

@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
  * */
 
 @WebServlet("/servlet17")
-public class servlet17 extends HttpServlet {
+public class servlet17control extends HttpServlet {
 	private static final long serialVersionUID = 1L;
   
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

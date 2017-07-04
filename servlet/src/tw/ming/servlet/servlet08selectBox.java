@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 @WebServlet("/servlet08")
-public class servlet08 extends HttpServlet {
+public class servlet08selectBox extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int x,y,result,op;
 		try {

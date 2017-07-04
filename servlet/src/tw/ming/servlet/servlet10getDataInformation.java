@@ -24,7 +24,7 @@ import javax.servlet.http.Part;
  */
 @WebServlet("/servlet10")
 @MultipartConfig
-public class servlet10 extends HttpServlet {
+public class servlet10getDataInformation extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private int counter;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -32,16 +32,21 @@ public class servlet10 extends HttpServlet {
 		response.setContentType("text/html; charset=utf8");
 		PrintWriter out = response.getWriter();
 		
+		//從html檔讀取上傳的檔案
 		Part part = request.getPart("upload");
 		
+		//得到檔案的資訊
 		Collection<String> cc = part.getHeaderNames();
 		for(String c:cc){
 			String v = part.getHeader(c);
-			out.println(c+"<br/>"+v+"<br/>");
+			out.println(c+":"+v+"<br/>");
 		}
+		//得到檔案名稱與路徑
 		String filename = part.getSubmittedFileName();
 		out.print(filename+"\n"+"<br/>");
 		String name = part.getName();
+		
+		//得到上傳檔案的容量
 		long size = part.getSize();
 		out.print(name+":"+size);
 		

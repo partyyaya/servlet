@@ -19,7 +19,7 @@ import javax.servlet.http.Part;
 		initParams = { 
 				@WebInitParam(name = "servlet12", value = "123", description = "123")
 		})
-public class servlet12 extends HttpServlet {
+public class servlet12pluralUpdate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -31,6 +31,7 @@ public class servlet12 extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		request.setCharacterEncoding("UTF-8");
 		String uploadpath = getServletContext().getInitParameter("upload-path");
+		//因有多個檔案上傳所以用getParts(),回傳集合一一取出
 		Collection<Part> parts = request.getParts();
 		
 		for(Part part:parts) {

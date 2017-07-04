@@ -16,7 +16,7 @@ import javax.servlet.http.Part;
  */
 @WebServlet("/servlet11")
 @MultipartConfig
-public class servlet11 extends HttpServlet {
+public class servlet11singleUpdate extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);

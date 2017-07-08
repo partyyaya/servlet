@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 
-@WebServlet("/servlet22")
+@WebServlet("/servlet22imageDraw")
 public class servlet22imageDraw extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

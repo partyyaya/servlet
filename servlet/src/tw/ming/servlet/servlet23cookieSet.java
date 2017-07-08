@@ -25,13 +25,13 @@ public class servlet23cookieSet extends HttpServlet {
 		cookieAccount.setMaxAge(1*60);
 		response.addCookie(cookieAccount);
 		
-		//設一個cookie:name:ming
+		
 		Cookie cookieRemember = new Cookie("remember","true");
 		//設定cookie生命存放時間(秒)
 		cookieRemember.setMaxAge(1*60);
 		response.addCookie(cookieRemember);
 		
-		//設一個cookie:name:ming
+		
 		Cookie cookiePasswd = new Cookie("passwd","123456");
 		//設定cookie生命存放時間(秒)
 		cookiePasswd.setMaxAge(1*60);

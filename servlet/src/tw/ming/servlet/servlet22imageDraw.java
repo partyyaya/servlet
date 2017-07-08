@@ -32,7 +32,7 @@ public class servlet22imageDraw extends HttpServlet {
 		BufferedImage bimg = ImageIO.read(image);
 		Graphics g2d = bimg.getGraphics();
 		
-		//作畫(樣式,粗細)
+		//作畫(樣式,粗細)((要在圖片後面輸出才會覆蓋在上面
 		Font font = new Font(null,Font.BOLD+Font.ITALIC,48);
 		//變形
 		AffineTransform tran = new AffineTransform();

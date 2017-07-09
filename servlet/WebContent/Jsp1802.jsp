@@ -9,8 +9,8 @@
 <body>
 <%
 	String method = request.getMethod();
-	ServletRequest req = pageContext.getRequest();
-	HttpServletRequest req2=(HttpServletRequest)pageContext.getRequest();
+	ServletRequest req = pageContext.getRequest();//父
+	HttpServletRequest req2=(HttpServletRequest)pageContext.getRequest();//子
 	
 	//Query:會得到網址列的輸入方式:user=bfdsb&passwd=dsavds
 	String query = req2.getQueryString();

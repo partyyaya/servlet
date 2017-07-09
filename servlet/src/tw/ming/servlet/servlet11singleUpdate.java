@@ -14,7 +14,7 @@ import javax.servlet.http.Part;
 /**
  * Servlet implementation class servlet11
  */
-@WebServlet("/servlet11")
+@WebServlet("/servlet11singleUpdate")
 @MultipartConfig
 public class servlet11singleUpdate extends HttpServlet {
 	
@@ -26,7 +26,7 @@ public class servlet11singleUpdate extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		request.setCharacterEncoding("UTF-8");
-		String uploadpath = getServletContext().getInitParameter("upload");
+		String uploadpath = getServletContext().getInitParameter("upload-path");
 		Part part = request.getPart("upload");
 		String header = part.getHeader("Content-Disposition");
 		

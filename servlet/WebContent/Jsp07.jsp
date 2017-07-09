@@ -6,7 +6,7 @@
 %@page,include,taglib:代表只是元素
 -->
 <%@page info="測試一下" %>
-<%@ page errorPage="Jsp08errorPage.jsp" %>
+<%@ page errorPage="Jsp07errorPage.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>

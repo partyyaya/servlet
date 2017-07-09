@@ -15,9 +15,9 @@ import javax.servlet.http.Part;
 
 @MultipartConfig
 @WebServlet(
-		urlPatterns = { "/servlet12" }, 
+		urlPatterns = { "/servlet12pluralUpdate" }, 
 		initParams = { 
-				@WebInitParam(name = "servlet12", value = "123", description = "123")
+				@WebInitParam(name = "servlet12pluralUpdate", value = "123", description = "123")
 		})
 public class servlet12pluralUpdate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -30,6 +30,7 @@ public class servlet12pluralUpdate extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		request.setCharacterEncoding("UTF-8");
+		//取得context域的位置路徑
 		String uploadpath = getServletContext().getInitParameter("upload-path");
 		//因有多個檔案上傳所以用getParts(),回傳集合一一取出
 		Collection<Part> parts = request.getParts();

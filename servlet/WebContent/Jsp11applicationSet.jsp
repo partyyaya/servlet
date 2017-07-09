@@ -8,6 +8,10 @@
 </head>
 <body>
 <%	//application比session範圍大
+	//request: HTTP請求開始到結束這段時間
+	//session: HTTP會話開始到結束這段時間
+	//application: 伺服器啟動到停止這段時間
+	
 	application.setAttribute("x", 123);
 	request.setAttribute("x", (int)(Math.random()*49+1));
 	String x=request.getParameter("x");

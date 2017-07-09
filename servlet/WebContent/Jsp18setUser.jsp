@@ -9,14 +9,14 @@
 <body>
 
 get:
-<form action="Jsp1802.jsp" method='get'>
+<form action="Jsp18getUserAndIP.jsp" method='get'>
 	<input type='text' name='user' />
 	<input type='password' name='passwd' />
 	<input type='submit' value='login' />
 </form><br/>
 
 post:
-<form action="Jsp1802.jsp" method='post'>
+<form action="Jsp18getUserAndIP.jsp" method='post'>
 	<input type='text' name='user' />
 	<input type='password' name='passwd' />
 	<input type='submit' value='login' />

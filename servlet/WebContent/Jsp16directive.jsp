@@ -18,15 +18,19 @@
 <jsp:declaration>
 	int i;String name;
 </jsp:declaration>
+
 <!-- scriptlet:邏輯使用 -->
 <jsp:scriptlet>
 	i=10;
 	name="ming06";
 </jsp:scriptlet>
+
 <!-- expression:輸出name -->
 <jsp:expression>name</jsp:expression>
+
 <!--bean物件會自動使用toString方法  -->
 <jsp:expression>bean</jsp:expression>
+
 <!-- 輸出文字使用 -->
 <jsp:text> I am ming</jsp:text>
 </body>

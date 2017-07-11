@@ -29,6 +29,7 @@ Page:${pageScope.name}<br/>
 Request:${requestScope.name}<br/>
 Session:${sessionScope.name}<br/>
 Application:${applicationScope.name}<br/>
+
 1.m1():<%=beanUtil.m1() %><br/>
 2.m1():${beanUtil.m1()}<br/>
 <!-- 方法傳入參數方式 -->

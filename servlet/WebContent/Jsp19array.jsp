@@ -31,7 +31,6 @@ Name1:${usernames[0]}<br/>
 Name2:${usernames[1]}<br/>
 
 <!-- 網址後輸入:?i= -->
-
 List1:${list[0]}<br/>
 List1:${list[param.i]}<br/>
 
@@ -40,6 +39,7 @@ HashMap:${hashmap["account"]}<br/>
 ${10+5}<br/>
 ${(param.q==1)?"yes":"no"}<br/>
 ${3>5}<br/>
+
 <!-- 以  AscII碼進行比較 -->
 ${"a"<"b" }<br/>
 ${"4">3 }<br/>

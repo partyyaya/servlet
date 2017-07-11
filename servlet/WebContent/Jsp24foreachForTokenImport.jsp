@@ -39,8 +39,8 @@
 	pageContext.setAttribute("line", line);
 %>
 <c:forTokens items="${line }" delims="," var="field" varStatus="status">
-${status.index}:${field }<br/><!-- 從0開始 -->
-${status.count}:${field }<br/><!-- 從1開始 -->
+${status.index}:${field }<br/><!-- 從0開始計數 -->
+${status.count}:${field }<br/><!-- 從1開始計數 -->
 </c:forTokens>
 <hr/>
 

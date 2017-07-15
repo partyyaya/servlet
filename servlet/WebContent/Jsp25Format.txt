@@ -1,0 +1,29 @@
+﻿在WEB-INF建立classes > 建立 (隨意檔名)_(語言)_(國家)的file檔
+
+若為res_zh_TW,則輸入中文會自動轉換
+
+屬性=欲轉字
+Hello=\u4F60\u597D
+World=\u5168\u4E16\u754C
+CompanyName=\u660E\u660E\u516C\u53F8
+
+
+<fmt:setBundle basename="res"/> (檔名)
+<fmt:message key="Hello"/>	(屬性)
+<fmt:message key="World"/>
+<hr/>
+<fmt:message key="CompanyName"/>
+
+
+<fmt:setTimeZone value="Asia/Taipei"/>(時區)
+<fmt:formatDate value="${now }" type="both" dateStyle="full"/> 
+both=日期+時間(date,time)
+dateStyle="full"(full有星期,long沒星期)
+
+
+Default:<fmt:formatNumber value="${123456.8907 }"/><br/>
+沒有千分位:<fmt:formatNumber value="${123456.8907 }" groupingUsed="false"/><br/>
+Max 4 digit(整數最大4位):<fmt:formatNumber value="${123456.8907 }" maxIntegerDigits="4"/><br/>
+Min 4 digit(整數最小8位):<fmt:formatNumber value="${123456.8907 }" minIntegerDigits="8" groupingUsed="false"/><br/>
+Faction Max 2 digit(小數點取兩位):<fmt:formatNumber value="${123456.8907 }" maxFractionDigits="2"/><br/>
+貨幣:<fmt:formatNumber value="${123}" type="currency" currencyCode="JPY"/><br/>

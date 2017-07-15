@@ -18,7 +18,7 @@
 <c:out value="${y}" default="no value"></c:out><br/>
 <c:out value = "${'Hello world'}"/><br/>
 
-<c:set var="var1" value="123" scope="page"/>
+<c:set var="var1" value="123" />
 ${var1}<br/>
 ${var1+100}<br/>
 

@@ -20,6 +20,7 @@ public class bean01 implements Serializable{
 		this.id = id;this.name = name;
 		System.out.println(id+":"+name);
 	}
+	
 	public String getId() {
 		return id;
 	}

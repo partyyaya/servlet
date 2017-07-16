@@ -8,9 +8,10 @@
    增加標籤方法:
    <tag>
       <name>自取的標籤名稱</name>
-      <tag-class>自設class所在的package包</tag-class>
+      <tag-class>自設class所在的package包.class名稱</tag-class>
       <body-content>empty</body-content>
    </tag>
+   
 </taglib>
 
 ps:Mytag,Mytag2,Mytag3為taglib使用

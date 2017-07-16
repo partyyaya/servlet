@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page errorPage="error.jsp" %>
+<%@ page errorPage="Jsp07errorPage.jsp" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
+<%//若沒有id則直接跳轉到31 %>
 <c:if test="${empty param.editid and empty param.id}">
-  <c:redirect url="Jsp31sql.jsp"/>
+  <c:redirect url="Jsp31sqlDel.jsp"/>
 </c:if>
 
 <sql:setDataSource driver="com.mysql.jdbc.Driver" 
@@ -20,10 +20,9 @@
 		<sql:param>${param.realname}</sql:param>
 		<sql:param>${param.id}</sql:param>
 	</sql:update>
-  	<c:redirect url="Jsp31sql.jsp"/>
+  	<c:redirect url="Jsp31sqlDel.jsp"/>
 </c:if>	
-	
-	
+		
 <sql:query var="result">
 	select * from member where id = ?
 	<sql:param>${param.editid }</sql:param>
@@ -37,7 +36,7 @@
 </head>
 <body>
 
-<form>
+<form >
 	<input type="hidden" name="id" value="${result.rows[0].id}" />
 	Account:<input type="text" name="account" value="${result.rows[0].account}"/><br>
 	Password:<input type="password" name="passwd" value="${result.rows[0].passwd}" /><br>

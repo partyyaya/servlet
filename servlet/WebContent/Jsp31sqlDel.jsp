@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page errorPage="error.jsp" %>
+<%@ page errorPage="Jsp07errorPage.jsp" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <sql:setDataSource driver="com.mysql.jdbc.Driver" 
@@ -38,7 +38,7 @@
 			<td>${row.passwd }</td>
 			<td>${row.realname }</td>
 			<td><a href="?delid=${row.id}">Delete</a></td>
-			<td><a href="Jsp32sql.jsp?editid=${row.id}">Edit</a></td>
+			<td><a href="Jsp31sqlEdit.jsp?editid=${row.id}">Edit</a></td>
 		</tr>
 	</c:forEach>
 	

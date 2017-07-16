@@ -1,0 +1,25 @@
+<taglib>
+   <tlib-version>2.0</tlib-version>
+   <jsp-version>2.0</jsp-version>
+   <short-name>Example TLD</short-name>
+   
+   <tag>
+      <name>Hello</name>
+      <tag-class>tw.ming.javabeans.Mytag</tag-class>
+      <body-content>empty</body-content>
+   </tag>
+    <tag>
+      <name>Upper</name>
+      <tag-class>tw.ming.javabeans.Mytag2</tag-class>
+      <body-content>Scriptless</body-content>
+   </tag>
+   <tag>
+      <name>Mesg</name>
+      <tag-class>tw.ming.javabeans.Mytag3</tag-class>
+      <body-content>Scriptless</body-content>
+        
+      <attribute>
+         <name>message</name>
+      </attribute>
+   </tag>
+</taglib>

@@ -1,0 +1,21 @@
+首先在WEB-INF創立一個mytags.tld
+內容:
+<taglib>
+   <tlib-version>2.0</tlib-version>
+   <jsp-version>2.0</jsp-version>
+   <short-name>Example TLD</short-name>
+   
+   增加標籤方法:
+   <tag>
+      <name>自取的標籤名稱</name>
+      <tag-class>自設class所在的package包</tag-class>
+      <body-content>empty</body-content>
+   </tag>
+</taglib>
+
+ps:Mytag,Mytag2,Mytag3為taglib使用
+
+2.建立一個class並繼承:public class Mytag extends SimpleTagSupport
+
+3.在jsp加上:<%@ taglib uri="/WEB-INF/mytags.tld" prefix="iii" %> ((iii為自取名稱
+就可以使用<iii:Hello/>

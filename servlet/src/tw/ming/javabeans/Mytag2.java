@@ -19,8 +19,9 @@ public class Mytag2 extends SimpleTagSupport {
 		
 		JspContext context = getJspContext();
 		JspWriter out = context.getOut();
+		//取得標籤內容
 		JspFragment body = getJspBody();
-		//將管道加入,使其可以填入東西
+		//將管道加入,使其可以填入東西<標籤>body(欲填入字串)<標籤>
 		body.invoke(sw);
 		
 		String mesg = sw.toString();

@@ -5,3 +5,9 @@ session HTTP會話開始到結束這段時間
 application 伺服器啟動到停止這段時間
 
 原文網址：https://read01.com/KB72G4.html
+
+<MailServer>
+https://www.hmailserver.com/download
+
+smtp:port:25  寄信
+pop3:port:110 收信

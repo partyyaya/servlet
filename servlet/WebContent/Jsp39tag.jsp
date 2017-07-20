@@ -22,6 +22,8 @@
 <hr/>
 <ming:keyValue name="mouse" id="001" price="100"/>
 <hr>
-<ming:HashMap user="brad" name="Mouse"/>
+
+<hr/>
+<ming:smtp to="partyyaya@gmail.com" from="partyyaya@gmail.com"/>
 </body>
 </html>

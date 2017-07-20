@@ -1,5 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ tag dynamic-attributes="product"%>
+<%@ attribute name="from" required="true" %>
+<%@ attribute name="to" required="true" %>
 <!-- name="user"代表標籤內必有屬性( required設為true)  -->
 <%@ attribute name="user" required="true" %>
 <%@ tag import="java.util.*" %>

@@ -12,6 +12,7 @@
 	list.add("BBB");
 	list.add("CCC");
 	request.setAttribute("list", list);
+	list.add("DDD");//依樣會add進去,可透過el抓到
 	
 	HashMap<String,String>map = new HashMap<>();
 	map.put("name", "Ming");

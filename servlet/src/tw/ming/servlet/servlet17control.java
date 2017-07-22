@@ -38,7 +38,7 @@ public class servlet17control extends HttpServlet {
 		request.setAttribute("result",result);
 		//再把要求傳給view
 		request.getRequestDispatcher("servlet17view").forward(request, response);
-		
+		//後面在request.setAttribute()將得不到參數,因前面已轉發
 		//3.輸入:servlet17?x=11&y=21 會到servlet17view顯示
 	}
 

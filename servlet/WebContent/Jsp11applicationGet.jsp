@@ -9,7 +9,9 @@
 <body>
 <%
 	Integer x=(int)application.getAttribute("x");
-	out.print(x);
+	out.print(x+"<br>");
+	int intx = (int)request.getAttribute("x");
+	out.print(intx);
 	x++;
 	application.setAttribute("x", x);
 %>

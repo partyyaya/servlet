@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class servlet13
  */
-@WebServlet("/servlet13")
+@WebServlet("/servlet13DispatcherTo1415")
 public class servlet13DispatcherTo1415 extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

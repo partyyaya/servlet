@@ -22,7 +22,7 @@ import javax.servlet.http.Part;
 /**
  * Servlet implementation class servlet10
  */
-@WebServlet("/servlet10")
+@WebServlet("/servlet10getDataInformation")
 @MultipartConfig
 public class servlet10getDataInformation extends HttpServlet {
 	private static final long serialVersionUID = 1L;

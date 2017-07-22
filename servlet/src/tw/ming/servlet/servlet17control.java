@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
  * controler 
  * */
 
-@WebServlet("/servlet17")
+@WebServlet("/servlet17control")
 public class servlet17control extends HttpServlet {
 	private static final long serialVersionUID = 1L;
   

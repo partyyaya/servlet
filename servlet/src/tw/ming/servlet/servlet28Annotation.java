@@ -14,10 +14,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name="servlet28Annotation",urlPatterns= {"/servlet240","ming28.jsp","ming28.aspx"},
+@WebServlet(name="servlet28Annotation",urlPatterns= {"/servlet28Annotation","/servlet28Annotation.php"},
 		initParams={
-			@WebInitParam(name="x",value="456"),
-			@WebInitParam(name="y",value="456")
+			@WebInitParam(name="q",value="123"),
+			@WebInitParam(name="w",value="456")
 		}
 )
 public class servlet28Annotation extends HttpServlet {

@@ -22,8 +22,13 @@ public class servlet39ServerListener implements ServletContextListener{
 	public void contextInitialized(ServletContextEvent event) {
 		// TODO Auto-generated method stub
 		ServletContext servletContext = event.getServletContext();
+		
 		List<AsyncContext> asyncs = new LinkedList<>();
 		servletContext.setAttribute("asyncs", asyncs);
+		
+		servlet41AsyncListener myAsyncListener = new servlet41AsyncListener();
+		servletContext.setAttribute("asyncListener", myAsyncListener);
+		
 	}
 	
 }

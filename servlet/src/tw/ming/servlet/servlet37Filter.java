@@ -14,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 
 //urlPatterns= {"/*"}代表全部過濾,
 //urlPatterns= {"/iii/*"}在前面多加一層iii作為過濾層:@WebServlet("/iii/servlet01")
+//注意:filter不支援非同步操作:servlet3803
 @WebFilter(filterName="MingFilter",urlPatterns= {"/iii/*"})
 public class servlet37Filter implements Filter {
 

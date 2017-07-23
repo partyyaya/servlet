@@ -1,0 +1,18 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script type="text/javascript">
+$.ajaxSetup({ cache: false });
+function requestMesg(){
+	$.get("servlet39addAsync", function(data, status){
+		$("#mesg").html(data);
+		requestMesg();//自己檢查更新
+	});
+}
+requestMesg();
+</script>
+
+<h1> Big Company</h1>
+<hr />
+<div id='mesg'></div>
+<hr />
+Hello, World

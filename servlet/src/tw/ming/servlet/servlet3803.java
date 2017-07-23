@@ -44,7 +44,7 @@ public class servlet3803 extends HttpServlet {
 		@Override
 		public void run() {
 			try {
-				Thread.sleep(15*1000);
+				Thread.sleep(1*15*1000);
 				PrintWriter out = asyncContext.getResponse().getWriter();
 				out.println("ok3:"+(int)(Math.random()*49+1));
 				asyncContext.complete();

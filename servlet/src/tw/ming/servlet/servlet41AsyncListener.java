@@ -10,7 +10,7 @@ import javax.servlet.AsyncListener;
 import javax.servlet.http.HttpServletResponse;
 
 public class servlet41AsyncListener implements AsyncListener {
-
+	//有借用:servlet39addAsync,servlet39ServerListener
 	@Override
 	public void onComplete(AsyncEvent event) throws IOException {
 		// TODO Auto-generated method stub
@@ -22,6 +22,7 @@ public class servlet41AsyncListener implements AsyncListener {
 	public void onError(AsyncEvent event) throws IOException {
 		// TODO Auto-generated method stub
 		AsyncContext asyncContext = event.getAsyncContext();
+		//servlet39ServerListener:servletContext.setAttribute("asyncs", asyncs);
 		List<AsyncContext> asyncs = (List<AsyncContext>) asyncContext.getRequest().getServletContext().getAttribute("asyncs");
 		asyncs.remove(asyncContext);
 		

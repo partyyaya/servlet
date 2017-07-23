@@ -22,7 +22,7 @@ public class servlet40sqlMessage extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String mesg = request.getParameter("mesg");
-		//40.ajax02,ajax0202一組
+		//40.ajax02,ajax0202一組(ajax02會用到servlet39add)
 		// 更新資料庫訊息
 		try {
 			Connection conn = (Connection)getServletContext().getAttribute("conn");

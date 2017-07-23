@@ -17,9 +17,14 @@ public class servlet39addAsync extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ServletContext servletContext = getServletContext();
+		
+		//servlet39ServerListener:
+		//servletContext.setAttribute("asyncs", asyncs);
+		//servletContext.setAttribute("asyncListener", myAsyncListener);
 		List<AsyncContext> asyncs=(List<AsyncContext>) servletContext.getAttribute("asyncs");
 		servlet41AsyncListener asyncListner =  (servlet41AsyncListener)servletContext.getAttribute("asyncListener");
 		System.out.println(asyncs);
+		
 		//將送來的要求一一存放於集合,為了避免同時使用synchronized
 		synchronized (asyncs) {
 			AsyncContext async = request.startAsync();

@@ -1,0 +1,42 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+$.ajaxSetup({ cache: false });//ie瀏覽器請勿快取
+function getData(){
+	$.get("servlet38ajax",function(data,status){
+		$("#here").html(data);
+	});
+}
+function getData2(){
+	$.get("servlet3802",function(data,status){
+		$("#here2").html(data);
+	});
+}
+function getData3(){
+	$.get("servlet3803",function(data,status){
+		$("#here3").html(data);
+	});
+}
+function getData4(){
+	$.get("servlet39addAsync",function(data,status){
+		$("#mesg").html(data);
+	});
+}
+</script>
+<h1>Ming Big Company</h1>
+<hr/>
+<input type="button" onclick="getData()" value="Get Data"/>
+<hr/>
+<div id="here"></div>
+<hr/>
+<input type="button" onclick="getData2()" value="Get Data2"/>
+<hr/>
+<div id="here2"></div>
+<hr/>
+<input type="button" onclick="getData3()" value="Get Data3"/>
+<hr/>
+<div id="here3"></div>
+<hr/>
+<input type="button" onclick="getData4()" value="Get Message"/>
+<hr/>
+<div id="mesg"></div>
+<hr/>

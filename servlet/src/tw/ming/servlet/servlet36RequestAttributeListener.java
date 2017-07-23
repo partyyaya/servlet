@@ -5,7 +5,7 @@ import javax.servlet.ServletRequestAttributeEvent;
 import javax.servlet.ServletRequestAttributeListener;
 import javax.servlet.annotation.WebListener;
 
-//@WebListener
+@WebListener
 public class servlet36RequestAttributeListener implements ServletRequestAttributeListener {
 
 	@Override

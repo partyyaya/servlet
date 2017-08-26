@@ -1,0 +1,25 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<button onclick="test()">Test1</button>
+<div id="here"></div>
+<script>
+	function test(){
+		$.ajax({
+			url:"ajax03.php",
+			success:function (result,status,xhr){
+				console.log("ok"+result+":"+xhr.readyState);
+				$("#here").html(result);
+			},
+			error:function(xhr,status,error){
+				console.log("error");
+			},
+			beforeSend:function(xhr){
+				console.log("beforeSend:"+xhr.readyState);
+			},
+			complete:function(xhr,status){
+				console.log("complete:"+xhr.status+":"+status);
+				console.log("complete:"+xhr.responseText);
+			}
+		});
+	}
+</script>

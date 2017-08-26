@@ -1,0 +1,31 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<button onclick="test1()">Test2</button>
+<div id="here"></div>
+<script>
+	function test1(){
+			$.post("ajax05.php",{
+				account:"ming",
+				passwd:"123456"
+			},
+			function(data,status,xhr){
+				console.log(xhr.status);
+				console.log(data+":"+status);
+			})
+		});
+	}
+	
+	function test2(){
+		$.ajax({
+			url:"ajax05.php",
+			type:"POST",
+			data:{
+				account:"iii",
+				passwd:"1234567"
+			},
+			complete:function(xhr,status){
+				console.log(status+"?:"+xhr.status)
+			}
+		});
+	}
+</script>

@@ -25,6 +25,7 @@ public class servlet25getSession extends HttpServlet {
 		servlet25member member = new servlet25member("ming", 24);
 		//可存放物件
 		session.setAttribute("who",member);
+		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

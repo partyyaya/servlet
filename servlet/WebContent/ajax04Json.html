@@ -1,0 +1,18 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script>
+//JavaScript Object
+var member={
+	"id":"123",
+	"account":"ming",
+	"realname":"mingming",
+	"age":"22",
+	"gender":"false",
+	"language":["JAVA","JavaScript","Jsp"]
+};
+console(member.account);
+var memeberString = JSON.stringify(memeber);//轉JSON字串
+console(memberString);
+
+var memberObj = JSON.parse(memberString);//將JSON字串變成物件
+console(memberObj.realname);
+</script>
